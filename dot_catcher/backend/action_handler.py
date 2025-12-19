@@ -11,19 +11,17 @@ producer = KafkaProducer(
 
 @app.route('/catch_dot', methods=['POST'])
 def catch_dot():
-    data = request.get_json(silent=True)
-    if not data or 'position' not in data:
+    data = request.get_json(silent=True) or {}
+    if 'position' not in data:
         return jsonify(error="Invalid data"), 400
 
-    event = {
-        "event_type": "dot_caught",
-        "position": data['position'],
-        "timestamp": data.get('timestamp'),
-        "user_id": data.get('user_id', 'anonymous')
-    }
-
     try:
-        producer.send('actions', event)
+        producer.send('actions', {
+            "event_type": "dot_caught",
+            "position": data['position'],
+            "timestamp": data.get('timestamp'),
+            "user_id": data.get('user_id', 'anonymous')
+        })
         return jsonify(status="success", message="Action recorded")
     except Exception as e:
         return jsonify(error=str(e)), 500

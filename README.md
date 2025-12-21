@@ -2,7 +2,7 @@
 
 A real-time interactive game built with Python, Kafka, and React where players catch randomly appearing dots on a 5x5 grid.
 
-## 🎮 Game Overview
+## Game Overview
 
 Dot Catcher is an engaging game where dots randomly appear on a 5x5 grid and players must click on them before they disappear. The game features real-time scoring, win/lose conditions, and a sleek user interface.
 
@@ -13,7 +13,7 @@ Dot Catcher is an engaging game where dots randomly appear on a 5x5 grid and pla
 - Lose condition: Miss 5 dots
 - Real-time score tracking and progress visualization
 
-## 🏗️ System Architecture
+## System Architecture
 
 The game follows a microservices architecture with Kafka as the messaging backbone:
 
@@ -51,7 +51,7 @@ graph TD
    - Interactive 5x5 grid with visual feedback
    - Progress bars for score and misses
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -106,7 +106,7 @@ cd /Users/lobsangtseten/Desktop/IntelliMove
    cd frontend && npm run dev
    ```
 
-## 🎯 How to Play
+## How to Play
 
 1. Open your browser and navigate to: `http://localhost:5173`
 2. Dots will randomly appear on the 5x5 grid as colored circles
@@ -120,7 +120,7 @@ cd /Users/lobsangtseten/Desktop/IntelliMove
 - **Reset Button**: Restart the game
 - **Progress Bars**: Visual indicators for score and mistakes
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 IntelliMove/
@@ -141,7 +141,7 @@ IntelliMove/
 └── stop_game.sh                  # Stop all services script
 ```
 
-## ⚙️ Technical Specifications
+## Technical Specifications
 
 ### Kafka Event Schema
 
@@ -183,7 +183,7 @@ IntelliMove/
 | Backend Server | 5001 |
 | Frontend Dev Server | 5173 |
 
-## 🛠️ Development Guide
+## Development Guide
 
 ### Backend Extension
 
@@ -219,7 +219,7 @@ IntelliMove/
    - Update CSS for responsive grid layout
    - Modify game logic for new dimensions
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -227,7 +227,7 @@ IntelliMove/
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a pull request
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -257,11 +257,11 @@ IntelliMove/
 - **Frontend Logs**: Browser developer console
 - **Kafka Logs**: `~/kafka/logs/` directory
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built with Apache Kafka for reliable event streaming
 - React and Vite for modern frontend development
